@@ -11,7 +11,7 @@
 
 using namespace std;
 
-#define PORT 7900
+#define PORT 4312
 
 class Servidor
 {

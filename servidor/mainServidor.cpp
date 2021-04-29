@@ -19,10 +19,12 @@ int main(int argc, char const *argv[])
     Servidor s(REFRIGERANTE, AGUA, CERVEJA);
     s.inicializacao();
     int valor = 0;
-    while (valor != -1)
+
+    while (1)
     {
         valor = s.conexao();
+        if (valor == -1)
+            break;
     }
-
     return 0;
 }

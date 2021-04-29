@@ -40,15 +40,16 @@ void Servidor::inicializacao()
         perror("Esperando");
         exit(EXIT_FAILURE);
     }
+}
+
+int Servidor::conexao()
+{
     if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t *)&addrlen)) < 0)
     {
         perror("Aceitar");
         exit(EXIT_FAILURE);
     }
-}
 
-int Servidor::conexao()
-{
     char const *mensagem;
 
     valread = read(new_socket, buffer, 15);
@@ -57,9 +58,12 @@ int Servidor::conexao()
     string frase(buffer);
     int qtd = 0;
     string nome{};
+    cout << frase.data() << endl;
+    if (!strcmp(frase.data(), "sair"))
+    {
+        return -1;
+    }
     sscanf(frase.data(), "%d%s", &qtd, nome.data());
-
-    // cout << buffer << " - " << nome.data() << " - " << qtd << endl;
 
     if (!strcmp(nome.data(), "cerveja"))
     {
@@ -100,10 +104,6 @@ int Servidor::conexao()
         }
         cout << nome.data() << endl;
     }
-    else if (!strcmp(nome.data(), "sair"))
-    {
-        return -1;
-    }
     else
     {
         mensagem = (char *)"Nome da bebida incorreto";
@@ -111,5 +111,5 @@ int Servidor::conexao()
 
     send(new_socket, mensagem, strlen(mensagem), 0);
     cout << "Mensagem enviada" << endl;
-    //return 0;
+    return 0;
 }
