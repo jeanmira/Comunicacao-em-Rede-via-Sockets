@@ -17,11 +17,6 @@ int main(int argc, char const *argv[])
 
     int valor = 0;
 
-    /* while (1)
-    { */
     valor = c.conexao();
-    /* if (valor == -1)
-            break;
-    } */
     return 0;
 }

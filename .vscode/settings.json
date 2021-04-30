@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "iostream": "cpp",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "rede.h": "c"
     }
 }

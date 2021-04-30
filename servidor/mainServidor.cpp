@@ -8,10 +8,6 @@
 
 #include "servidor.h"
 
-#define REFRIGERANTE 3
-#define AGUA 3
-#define CERVEJA 3
-
 using namespace std;
 
 int main(int argc, char const *argv[])

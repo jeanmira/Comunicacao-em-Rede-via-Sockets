@@ -41,9 +41,6 @@ int Cliente::conexao()
     cout << "Mensagem enviada" << endl;
     valread = read(sock, buffer, 1024);
     cout << buffer << endl;
-    if (mensagem == "sair")
-    {
-        return -1;
-    }
+
     return 0;
 }
