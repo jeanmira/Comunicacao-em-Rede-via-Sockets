@@ -29,6 +29,7 @@ int Cliente::inicializacao()
              << "Falha na conexão" << endl;
         return -1;
     }
+
     return 0;
 }
 
@@ -36,10 +37,13 @@ int Cliente::conexao()
 {
     char mensagem[15];
     cin.getline(mensagem, 15);
-
     send(sock, &mensagem, sizeof(mensagem), 0);
     cout << "Mensagem enviada" << endl;
     valread = read(sock, buffer, 1024);
     cout << buffer << endl;
+    if (mensagem == "sair")
+    {
+        return -1;
+    }
     return 0;
 }

@@ -16,7 +16,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    Servidor s(REFRIGERANTE, AGUA, CERVEJA);
+    Servidor s(3, 3, 3);
     s.inicializacao();
     int valor = 0;
 
