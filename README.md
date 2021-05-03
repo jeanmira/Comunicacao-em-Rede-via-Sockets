@@ -1,6 +1,6 @@
 # **Comunicação via Rede através de Sockets**
 
-[![Generic badge](https://img.shields.io/badge/Status-Desenvolvimento-<red>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Status-Finalizado-<red>.svg)](https://shields.io/)
 
 ### Como executar o programa:
      • Para configurar a quantidade de bebidas da loja abra o arquivo mainServidor.cpp que está dentro da pasta servidor e mude a quantidade no construtor padrão do servidor. Exemplo: Servidor(cerveja, água, refrigerante);
