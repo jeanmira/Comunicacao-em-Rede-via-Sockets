@@ -1,19 +1,12 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <sys/socket.h>
-#include <stdlib.h>
-#include <netinet/in.h>
-#include <string.h>
-#include <iostream>
-
 #include "cliente.h"
-
-using namespace std;
 
 int main(int argc, char const *argv[])
 {
+    // Construtor padrão
     Cliente c;
+    // Inicializar os parâmetros do cliente na rede
     c.inicializacao();
+    // Faz a troca de mensagens
     c.conexao();
     return 0;
 }

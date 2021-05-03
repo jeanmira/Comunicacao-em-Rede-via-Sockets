@@ -1,24 +1,17 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <sys/socket.h>
-#include <stdlib.h>
-#include <netinet/in.h>
-#include <string.h>
-#include <iostream>
-
 #include "servidor.h"
-
-using namespace std;
 
 int main(int argc, char const *argv[])
 {
     // Servidor(cerveja, agua, refrigerante)
-    Servidor s(3, 3, 3);
+    Servidor s(3, 3, 3); // Construtor padrão
+    // Inicializar os parâmetros do servidor na rede
     s.inicializacao();
-    int valor = 0;
+    int valor = 0; // Variável auxiliar para sair da execução do servidor
 
+    // Executa enquanto o usuário desejar
     while (1)
     {
+        // Faz a troca de mensagens
         valor = s.conexao();
         if (valor == -1)
         {
@@ -27,3 +20,6 @@ int main(int argc, char const *argv[])
     }
     return 0;
 }
+
+
+
