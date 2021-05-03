@@ -18,14 +18,11 @@ class Cliente
 {
 private:
     int sock = 0;
-    int valread;
-    struct sockaddr_in serv_addr;
-    char buffer[1024] = {0};
 
 public:
     Cliente();
     ~Cliente();
-    int conexao();
-    int inicializacao();
+    void conexao();
+    void inicializacao();
 };
 #endif

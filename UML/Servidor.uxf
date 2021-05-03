@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>171</y>
+      <w>369</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Servidor
+--
+- qtd_cerveja: int
+- qtd_agua: int
+- qtd_refrigerante: int
+- servidorFd: int
+- endereco: struct sockaddr_in
+- enderecoSize: int
+--
++ Servidor(cerveja: int, agua: int, refrigerante: int): void
++ ~Servidor(): void
++ conexao(): int
++ inicializacao(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -19,13 +19,9 @@ private:
     int qtd_cerveja;
     int qtd_agua;
     int qtd_refrigerante;
-    int server_fd;
-    int new_socket;
-    int valread;
-    struct sockaddr_in address;
-    int opt = 3;
-    int addrlen = sizeof(address);
-    char buffer[15] = {0};
+    int servidorFd;
+    struct sockaddr_in endereco;
+    int enderecoSize = sizeof(endereco);
 
 public:
     Servidor(int cerveja, int agua, int refrigerante);

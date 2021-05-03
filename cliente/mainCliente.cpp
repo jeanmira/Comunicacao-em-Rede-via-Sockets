@@ -14,9 +14,6 @@ int main(int argc, char const *argv[])
 {
     Cliente c;
     c.inicializacao();
-
-    int valor = 0;
-
-    valor = c.conexao();
+    c.conexao();
     return 0;
 }

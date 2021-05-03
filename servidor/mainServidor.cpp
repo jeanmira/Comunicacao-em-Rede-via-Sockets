@@ -20,7 +20,9 @@ int main(int argc, char const *argv[])
     {
         valor = s.conexao();
         if (valor == -1)
+        {
             break;
+        }
     }
     return 0;
 }
