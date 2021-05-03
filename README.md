@@ -8,6 +8,10 @@
      • Execute o comando: make all
      • No ubuntu ou derivado dentro da pasta cliente abra o terminal, para uma melhor experiência expanda ao máximo a tela
      • Execute o comando: make all
+     • Faça o pedido como nos exemplos abaixo, quantidade seguido da bebida desejada se acentuação:
+          • 1 cerveja
+          • 2 agua
+          • 3 refrigerante
 
 ### Observações da execução:
 O código do servidor ficará em execução até que o cliente digite “sair” como mensagem, ou que o usuário pressione as teclas ”ctrl + z” no terminal. O código do cliente deve sempre ser executado após fazer um pedido, sendo necessário depois da primeira compilação que o usuário digite apenas “./rede“ para executar novamente.
