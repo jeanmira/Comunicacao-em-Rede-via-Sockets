@@ -1,8 +1,16 @@
 #include "cliente.h"
 
-Cliente::Cliente() {}
-Cliente::~Cliente() {}
+//----- Construtor padrão
+Cliente::Cliente()
+{
+}
 
+//----- Destrutor padrão
+Cliente::~Cliente()
+{
+}
+
+//----- Inicializar os parâmetros do cliente na rede
 void Cliente::inicializacao()
 {
     struct sockaddr_in enderecoServidor;
@@ -30,6 +38,7 @@ void Cliente::inicializacao()
     }
 }
 
+//----- Faz a troca de mensagens
 void Cliente::conexao()
 {
     int valorLeitura;

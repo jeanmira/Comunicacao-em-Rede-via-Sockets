@@ -16,17 +16,17 @@ using namespace std;
 class Servidor
 {
 private:
-    int qtd_cerveja;
-    int qtd_agua;
-    int qtd_refrigerante;
-    int servidorFd;
-    struct sockaddr_in endereco;
-    int enderecoSize = sizeof(endereco);
+    int qtd_cerveja;                     // Quantidade de cerveja da loja
+    int qtd_agua;                        // Quantidade de água da loja
+    int qtd_refrigerante;                // Quantidade de refrigerante da loja
+    int servidorFd;                      // Servidor
+    struct sockaddr_in endereco;         // Endereço
+    int enderecoSize = sizeof(endereco); // Tamanho do endereço
 
 public:
-    Servidor(int cerveja, int agua, int refrigerante);
-    ~Servidor();
-    int conexao();
-    void inicializacao();
+    Servidor(int cerveja, int agua, int refrigerante); // Construtor padrão
+    ~Servidor();                                       // Destrutor padrão
+    int conexao();                                     // Inicializar os parâmetros do servidor na rede
+    void inicializacao();                              // Faz a troca de mensagens
 };
 #endif

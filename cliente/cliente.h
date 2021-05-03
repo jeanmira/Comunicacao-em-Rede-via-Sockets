@@ -20,9 +20,9 @@ private:
     int sock = 0;
 
 public:
-    Cliente();
-    ~Cliente();
-    void conexao();
-    void inicializacao();
+    Cliente();            // Construtor padrão
+    ~Cliente();           // Destrutor padrão
+    void conexao();       // Inicializar os parâmetros do cliente na rede
+    void inicializacao(); // Faz a troca de mensagens
 };
 #endif

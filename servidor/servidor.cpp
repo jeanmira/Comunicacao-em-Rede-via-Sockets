@@ -1,5 +1,6 @@
 #include "servidor.h"
 
+//----- Construtor padrão
 Servidor::Servidor(int cerveja, int agua, int refrigerante)
 {
     this->qtd_cerveja = cerveja;
@@ -7,8 +8,12 @@ Servidor::Servidor(int cerveja, int agua, int refrigerante)
     this->qtd_refrigerante = refrigerante;
 }
 
-Servidor::~Servidor() {}
+//----- Destrutor padrão
+Servidor::~Servidor()
+{
+}
 
+//----- Inicializar os parâmetros do servidor na rede
 void Servidor::inicializacao()
 {
     int opt = 3;
@@ -44,6 +49,7 @@ void Servidor::inicializacao()
     }
 }
 
+//----- Faz a troca de mensagens
 int Servidor::conexao()
 {
     int novoSocket;
