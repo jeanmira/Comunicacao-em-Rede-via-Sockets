@@ -88,7 +88,7 @@ int Servidor::conexao()
         {
             mensagem = (char *)"Quantidade solicitada indisponivel";
         }
-        cout << nome.data() << endl;
+        //cout << nome.data() << endl;
     }
     else if (!strcmp(nome.data(), "agua"))
     {
@@ -101,7 +101,7 @@ int Servidor::conexao()
         {
             mensagem = (char *)"Quantidade solicitada indisponivel";
         }
-        cout << nome.data() << endl;
+        //cout << nome.data() << endl;
     }
     else if (!strcmp(nome.data(), "refrigerante"))
     {
@@ -114,7 +114,7 @@ int Servidor::conexao()
         {
             mensagem = (char *)"Quantidade solicitada indisponivel";
         }
-        cout << nome.data() << endl;
+        //cout << nome.data() << endl;
     }
     else
     {
