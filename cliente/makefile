@@ -37,7 +37,7 @@ limpa:
 
 # Compila e executa o programa
 run:
-	$(CC) $(FLAGS) -c $(APPNAME)
+	$(CC) $(FLAGS) -c $(APPNAME) ../rede.cpp
 	$(CC) $(FLAGS) -o $(EXE) $(O) $(GRAPHIC)
 	./$(EXE)
 #gdb 

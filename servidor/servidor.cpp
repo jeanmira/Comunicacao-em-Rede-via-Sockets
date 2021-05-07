@@ -6,47 +6,13 @@ Servidor::Servidor(int cerveja, int agua, int refrigerante)
     this->qtd_cerveja = cerveja;
     this->qtd_agua = agua;
     this->qtd_refrigerante = refrigerante;
+    // Inicializar os parâmetros do servidor na rede
+    r.inicializacaoServidor();
 }
 
 //----- Destrutor padrão
 Servidor::~Servidor()
 {
-}
-
-//----- Inicializar os parâmetros do servidor na rede
-void Servidor::inicializacao()
-{
-    int opt = 3;
-
-    // Criando descritor de arquivo de socket
-    if ((servidorFd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
-    {
-        perror("Falha socket");
-        exit(EXIT_FAILURE);
-    }
-
-    // Conectando o socket a porta desejada
-    if (setsockopt(servidorFd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt)))
-    {
-        perror("Define sockopt");
-        exit(EXIT_FAILURE);
-    }
-
-    endereco.sin_family = AF_INET;
-    endereco.sin_addr.s_addr = INADDR_ANY;
-    endereco.sin_port = htons(PORT);
-
-    // Conectando o socket a porta desejada
-    if (bind(servidorFd, (struct sockaddr *)&endereco, sizeof(endereco)) < 0)
-    {
-        perror("Ligação falhou");
-        exit(EXIT_FAILURE);
-    }
-    if (listen(servidorFd, 3) < 0)
-    {
-        perror("Esperando");
-        exit(EXIT_FAILURE);
-    }
 }
 
 //----- Faz a troca de mensagens
@@ -56,7 +22,7 @@ int Servidor::conexao()
     int valorLeitura;
     char buffer[15] = {0};
 
-    if ((novoSocket = accept(servidorFd, (struct sockaddr *)&endereco, (socklen_t *)&enderecoSize)) < 0)
+    if ((novoSocket = accept(r.getServidorFd(), (struct sockaddr *)&r.getEndereco(), (socklen_t *)&r.getEnderecoSize())) < 0)
     {
         perror("Aceitar");
         exit(EXIT_FAILURE);
