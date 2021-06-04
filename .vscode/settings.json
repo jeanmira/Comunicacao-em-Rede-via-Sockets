@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "stdio.h": "c",
-        "iostream": "cpp",
-        "unistd.h": "c",
-        "rede.h": "c",
-        "*.tcc": "cpp"
-    }
-}
