@@ -1,4 +1,4 @@
-# **Comunicação via Rede através de Sockets**
+# **Comunicação via Rede através de Sockets / Network Communication through Sockets**
 
 [![Generic badge](https://img.shields.io/badge/Status-Finalizado-<red>.svg)](https://shields.io/)
 
